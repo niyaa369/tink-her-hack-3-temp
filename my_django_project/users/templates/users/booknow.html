@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Event Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Book Your Event</h1>
+        
+        <!-- Venue Selection -->
+        <h2 class="text-xl font-semibold mb-2">Select Venue</h2>
+        <select class="w-full p-2 border rounded mb-4">
+            <option value="venue1">Grand Ballroom</option>
+            <option value="venue2">Garden View Hall</option>
+            <option value="venue3">Beachfront Pavilion</option>
+        </select>
+        
+        <!-- Decoration Options -->
+        <h2 class="text-xl font-semibold mb-2">Decoration Theme</h2>
+        <select class="w-full p-2 border rounded mb-4">
+            <option value="theme1">Classic Elegance</option>
+            <option value="theme2">Rustic Charm</option>
+            <option value="theme3">Modern Chic</option>
+        </select>
+        
+       <!-- Food Options -->
+       <h2 class="text-xl font-semibold mb-2">Food Courses</h2>
+       <select class="w-full p-2 border rounded mb-4">
+        <option value="theme1">Veg</option>
+        <option value="theme2">Non-veg</option>
+    </select>
+
+        <!-- Booking Form -->
+        <h2 class="text-xl font-semibold mb-2">Event Details</h2>
+        <form>
+            <label class="block text-gray-700">Full Name</label>
+            <input type="text" class="w-full p-2 border rounded mb-4" placeholder="Enter your name" required>
+            
+            <label class="block text-gray-700">Email</label>
+            <input type="email" class="w-full p-2 border rounded mb-4" placeholder="Enter your email" required>
+            
+            <label class="block text-gray-700">Event Date</label>
+            <input type="date" class="w-full p-2 border rounded mb-4" required>
+            
+            <label class="block text-gray-700">Number of Guests</label>
+            <input type="number" class="w-full p-2 border rounded mb-4" placeholder="Enter number of guests" required>
+            
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -27,5 +27,6 @@ def user_login(request):
     return render(request, 'users/login.html', {'form': form})
 
 def home(request):
+    print('heyyyyy')
     return render(request, 'users/home.html')
 
