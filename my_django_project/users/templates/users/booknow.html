@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Now - Event Management</title>
+    <title>Book Now - ECOLUSH</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
@@ -33,9 +33,10 @@
         <option value="theme2">Non-veg</option>
     </select>
 
+
         <!-- Booking Form -->
         <h2 class="text-xl font-semibold mb-2">Event Details</h2>
-        <form>
+        <form  id="bookingForm">
             <label class="block text-gray-700">Full Name</label>
             <input type="text" class="w-full p-2 border rounded mb-4" placeholder="Enter your name" required>
             
@@ -47,9 +48,48 @@
             
             <label class="block text-gray-700">Number of Guests</label>
             <input type="number" class="w-full p-2 border rounded mb-4" placeholder="Enter number of guests" required>
-            
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Book Now</button>
-        </form>
+      </form>
+
+    <!-- Payment Options -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Payment Details</h2>
+    <div class="payment-section">
+      <!-- Radio buttons for payment method -->
+      <div class="mb-4">
+        <input type="radio" id="pm_credit_card" name="payment_method" value="credit_card" checked>
+        <label for="pm_credit_card" class="mr-4">Credit Card</label>
+        
+        <input type="radio" id="pm_paypal" name="payment_method" value="paypal">
+        <label for="pm_paypal">PayPal</label>
+      </div>
+
+      <!-- Credit Card Fields (will be shown only if "Credit Card" is selected) -->
+      <div class="credit-card-fields">
+        <label class="block text-gray-700">Card Number</label>
+        <input type="text" name="card_number" class="w-full p-2 border rounded mb-4" placeholder="Enter your card number">
+
+        <label class="block text-gray-700">Expiry Date</label>
+        <input type="text" name="expiry_date" class="w-full p-2 border rounded mb-4" placeholder="MM/YY">
+
+        <label class="block text-gray-700">CVV</label>
+        <input type="text" name="cvv" class="w-full p-2 border rounded mb-4" placeholder="Enter CVV">
+      </div>
+    </div>
+
+    <a href="success.html">
+    <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">Book Now</button>
+    </a>
+  </form>
+
+
+        <script>
+            document.getElementById('bookingForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the default form submission
+              window.location.href = 'success.html'; // Redirect to success.html
+            });
+          </script>
+
+
+
     </div>
 </body>
 </html>
